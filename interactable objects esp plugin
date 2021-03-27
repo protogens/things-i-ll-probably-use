@@ -48,7 +48,7 @@ local Plugin = {
             ["Aliases"] = {"touchesp", "tesp"},
             ["Function"] = function(args, speaker)
                 for i,v in pairs(Game:GetDescendants()) do
-                if v.ClassName == "TouchInterest" then
+                if v.ClassName == "TouchTransmitter" then
                 local a = Instance.new("BoxHandleAdornment")
             a.Name = "touchinterest esp"
             a.Parent = v.Parent
