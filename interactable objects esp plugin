@@ -87,9 +87,9 @@ local Plugin = {
         end
         },
         ["untouchinterestesp"] = {
-            ["ListName"] = "untouchinterestesp/untesp",
+            ["ListName"] = "untouchinterestesp/untouchesp/untesp",
             ["Description"] = "removes esp from blocks w/ touchinterest",
-            ["Aliases"] = {"untesp"},
+            ["Aliases"] = {"untesp", "untouchesp"},
             ["Function"] = function(args, speaker)
                 for i,v in pairs(Game:GetDescendants()) do
                 if v.ClassName == "BoxHandleAdornment" and v.Name == "touchinterest esp" then
