@@ -1,0 +1,280 @@
+--this gui is really just a script failure
+local U11D2A72TZ31ZJ31L61J318H101Y1C21I2DN2E92XP314L1B32952RI1H1T1021D = Instance.new("ScreenGui")
+local OpenFrame = Instance.new("ImageLabel")
+local CloseButton = Instance.new("ImageButton")
+local OpenButton = Instance.new("ImageButton")
+local MainFrame = Instance.new("ImageLabel")
+local BombTool = Instance.new("TextButton")
+local CrashTool = Instance.new("TextButton")
+local NoRag = Instance.new("TextButton")
+local LoopNoRag = Instance.new("TextButton")
+local AmplifyPush = Instance.new("TextButton")
+local NoPushCooldown = Instance.new("TextButton")
+local NoBombCooldown = Instance.new("TextButton")
+local BombAll = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+
+U11D2A72TZ31ZJ31L61J318H101Y1C21I2DN2E92XP314L1B32952RI1H1T1021D.Name = "U11D2A72TZ31ZJ31L61J318H101Y1C21I2DN2E92XP314L1B32952RI1H1T1021D"
+U11D2A72TZ31ZJ31L61J318H101Y1C21I2DN2E92XP314L1B32952RI1H1T1021D.Parent = game.CoreGui
+
+OpenFrame.Name = "OpenFrame"
+OpenFrame.Parent = U11D2A72TZ31ZJ31L61J318H101Y1C21I2DN2E92XP314L1B32952RI1H1T1021D
+OpenFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenFrame.BackgroundTransparency = 1.000
+OpenFrame.BorderSizePixel = 0
+OpenFrame.Position = UDim2.new(0.35281384, 0, 0.32441473, 0)
+OpenFrame.Size = UDim2.new(0.420560747, 0, 0.0752508342, 0)
+OpenFrame.Image = "rbxassetid://3570695787"
+OpenFrame.ImageColor3 = Color3.fromRGB(50, 50, 50)
+OpenFrame.ScaleType = Enum.ScaleType.Slice
+OpenFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+OpenFrame.SliceScale = 0.040
+OpenFrame.Active = true
+OpenFrame.Draggable = true
+
+CloseButton.Name = "CloseButton"
+CloseButton.Parent = OpenFrame
+CloseButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+CloseButton.BackgroundTransparency = 1.000
+CloseButton.BorderSizePixel = 0
+CloseButton.Position = UDim2.new(0.861111104, 0, 0, 0)
+CloseButton.Size = UDim2.new(0.138888896, 0, 1, 0)
+CloseButton.Image = "http://www.roblox.com/asset/?id=6089808083"
+CloseButton.MouseButton1Click:Connect(function()
+	MainFrame.Visible = false
+	OpenButton.Visible = true
+	CloseButton.Visible = false
+end)
+
+OpenButton.Name = "OpenButton"
+OpenButton.Parent = OpenFrame
+OpenButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OpenButton.BackgroundTransparency = 1.000
+OpenButton.BorderSizePixel = 0
+OpenButton.Position = UDim2.new(0.861111104, 0, 0, 0)
+OpenButton.Size = UDim2.new(0.138888896, 0, 1, 0)
+OpenButton.Visible = false
+OpenButton.Image = "http://www.roblox.com/asset/?id=6089807663"
+OpenButton.MouseButton1Click:Connect(function()
+	MainFrame.Visible = true
+	OpenButton.Visible = false
+	CloseButton.Visible = true
+end)
+
+MainFrame.Name = "MainFrame"
+MainFrame.Parent = OpenFrame
+MainFrame.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+MainFrame.BackgroundTransparency = 1.000
+MainFrame.BorderSizePixel = 0
+MainFrame.Position = UDim2.new(0.0167026948, 0, 0.999999642, 0)
+MainFrame.Size = UDim2.new(0.963888884, 0, 6.13333321, 0)
+MainFrame.Image = "rbxassetid://3570695787"
+MainFrame.ImageColor3 = Color3.fromRGB(50, 50, 50)
+MainFrame.ScaleType = Enum.ScaleType.Slice
+MainFrame.SliceCenter = Rect.new(100, 100, 100, 100)
+MainFrame.SliceScale = 0.020
+
+BombTool.Name = "BombTool"
+BombTool.Parent = MainFrame
+BombTool.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+BombTool.BorderSizePixel = 0
+BombTool.Position = UDim2.new(0.0201729108, 0, 0.0305343512, 0)
+BombTool.Size = UDim2.new(0.455331415, 0, 0.181159422, 0)
+BombTool.Font = Enum.Font.Bodoni
+BombTool.Text = "spawn bomb tool"
+BombTool.TextColor3 = Color3.fromRGB(255, 255, 255)
+BombTool.TextScaled = true
+BombTool.TextSize = 14.000
+BombTool.TextWrapped = true
+BombTool.MouseButton1Click:Connect(function()
+	local players = game:GetService("Players")
+	local player = players.LocalPlayer
+	local tool = Instance.new("Tool")
+	tool.Name = "Click Bomb"
+	tool.RequiresHandle = false
+	local myBackpack = player.Backpack
+	tool.Parent = myBackpack
+	local Mouse = player:GetMouse()
+	tool.Activated:Connect(function()
+		for i, v in pairs(players:GetChildren()) do
+			local backpack = v.Backpack
+			if backpack:FindFirstChild("ImpulseGrenade") then
+				backpack.ImpulseGrenade.CreateGrenade:FireServer(CFrame.new(), Mouse.hit)
+			end
+		end
+	end)
+end)
+
+CrashTool.Name = "CrashTool"
+CrashTool.Parent = MainFrame
+CrashTool.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+CrashTool.BorderSizePixel = 0
+CrashTool.Position = UDim2.new(0.518694639, 0, 0.0305343512, 0)
+CrashTool.Size = UDim2.new(0.45244956, 0, 0.181159422, 0)
+CrashTool.Font = Enum.Font.Bodoni
+CrashTool.Text = "server lagger tool"
+CrashTool.TextColor3 = Color3.fromRGB(255, 255, 255)
+CrashTool.TextScaled = true
+CrashTool.TextSize = 14.000
+CrashTool.TextWrapped = true
+CrashTool.MouseButton1Click:Connect(function()
+	local players = game:GetService("Players")
+	local player = players.LocalPlayer
+	local tool = Instance.new("Tool")
+	tool.Name = "Crash Tool"
+	tool.RequiresHandle = false
+	local myBackpack = player.Backpack
+	tool.Parent = myBackpack
+	local Mouse = player:GetMouse()
+	tool.Activated:Connect(function()
+		for i, v in pairs(players:GetChildren()) do
+			local backpack = v.Backpack
+			if backpack:FindFirstChild("ImpulseGrenade") then
+				while true do
+					wait()
+					backpack.ImpulseGrenade.CreateGrenade:FireServer(CFrame.new(), Mouse.hit)
+					backpack.ImpulseGrenade.CreateGrenade:FireServer(CFrame.new(), Mouse.hit)
+				end
+			end
+		end
+	end)
+end)
+
+NoRag.Name = "NoRag"
+NoRag.Parent = MainFrame
+NoRag.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+NoRag.BorderSizePixel = 0
+NoRag.Position = UDim2.new(0.0201729108, 0, 0.255725175, 0)
+NoRag.Size = UDim2.new(0.455331415, 0, 0.181159422, 0)
+NoRag.Font = Enum.Font.Bodoni
+NoRag.Text = "remove ragdoll"
+NoRag.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoRag.TextScaled = true
+NoRag.TextSize = 14.000
+NoRag.TextWrapped = true
+NoRag.MouseButton1Click:Connect(function()
+	local ard = game.Players.LocalPlayer.Character:FindFirstChild("Local Ragdoll")
+	if ard then
+		ard:Destroy()
+	end
+end)
+
+LoopNoRag.Name = "LoopNoRag"
+LoopNoRag.Parent = MainFrame
+LoopNoRag.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+LoopNoRag.BorderSizePixel = 0
+LoopNoRag.Position = UDim2.new(0.518694639, 0, 0.255725175, 0)
+LoopNoRag.Size = UDim2.new(0.45244956, 0, 0.181159422, 0)
+LoopNoRag.Font = Enum.Font.Bodoni
+LoopNoRag.Text = "loop remove ragdoll"
+LoopNoRag.TextColor3 = Color3.fromRGB(255, 255, 255)
+LoopNoRag.TextScaled = true
+LoopNoRag.TextSize = 14.000
+LoopNoRag.TextWrapped = true
+LoopNoRag.MouseButton1Click:Connect(function()
+	while true do
+		wait()
+		local ard = game.Players.LocalPlayer.Character:FindFirstChild("Local Ragdoll")
+		if ard then
+			ard:Destroy()
+		end
+	end
+end)
+
+AmplifyPush.Name = "AmplifyPush"
+AmplifyPush.Parent = MainFrame
+AmplifyPush.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+AmplifyPush.BorderSizePixel = 0
+AmplifyPush.Position = UDim2.new(0.518694639, 0, 0.480916023, 0)
+AmplifyPush.Size = UDim2.new(0.45244956, 0, 0.181159422, 0)
+AmplifyPush.Font = Enum.Font.Bodoni
+AmplifyPush.Text = "amplify push force"
+AmplifyPush.TextColor3 = Color3.fromRGB(255, 255, 255)
+AmplifyPush.TextScaled = true
+AmplifyPush.TextSize = 14.000
+AmplifyPush.TextWrapped = true
+AmplifyPush.MouseButton1Click:Connect(function()
+	while true do
+		wait()
+			local arf = game.Players.LocalPlayer.Character:FindFirstChild("Push")
+			if arf then
+				arf.PushEvent:FireServer()
+
+			end
+		end
+end)
+
+NoPushCooldown.Name = "NoPushCooldown"
+NoPushCooldown.Parent = MainFrame
+NoPushCooldown.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+NoPushCooldown.BorderSizePixel = 0
+NoPushCooldown.Position = UDim2.new(0.0201729108, 0, 0.480916023, 0)
+NoPushCooldown.Size = UDim2.new(0.455331415, 0, 0.181159422, 0)
+NoPushCooldown.Font = Enum.Font.Bodoni
+NoPushCooldown.Text = "no push cooldown"
+NoPushCooldown.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoPushCooldown.TextScaled = true
+NoPushCooldown.TextSize = 14.000
+NoPushCooldown.TextWrapped = true
+NoPushCooldown.MouseButton1Click:Connect(function()
+	while true do
+		wait()
+	local ard = game.Players.LocalPlayer.Character:FindFirstChild("Push")
+	if ard then
+		ard.Configuration.Cooldown.Value = 0
+	end
+end
+end)
+
+NoBombCooldown.Name = "NoBombCooldown"
+NoBombCooldown.Parent = MainFrame
+NoBombCooldown.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+NoBombCooldown.BorderSizePixel = 0
+NoBombCooldown.Position = UDim2.new(0.0201729108, 0, 0.706300437, 0)
+NoBombCooldown.Size = UDim2.new(0.455331415, 0, 0.181159422, 0)
+NoBombCooldown.Font = Enum.Font.Bodoni
+NoBombCooldown.Text = "no bomb cooldown"
+NoBombCooldown.TextColor3 = Color3.fromRGB(255, 255, 255)
+NoBombCooldown.TextScaled = true
+NoBombCooldown.TextSize = 14.000
+NoBombCooldown.TextWrapped = true
+NoBombCooldown.MouseButton1Click:Connect(function()
+	while true do
+		wait()
+		local ard = game.Players.LocalPlayer.Character:FindFirstChild("ImpulseGrenade")
+		if ard then
+			ard.Configuration.Cooldown.Value = 0
+		end
+	end
+end)
+
+
+BombAll.Name = "BombAll"
+BombAll.Parent = MainFrame
+BombAll.BackgroundColor3 = Color3.fromRGB(72, 72, 72)
+BombAll.BorderSizePixel = 0
+BombAll.Position = UDim2.new(0.512968302, 0, 0.706300437, 0)
+BombAll.Size = UDim2.new(0.455331415, 0, 0.181159422, 0)
+BombAll.Font = Enum.Font.Bodoni
+BombAll.Text = "bomb all"
+BombAll.TextColor3 = Color3.fromRGB(255, 255, 255)
+BombAll.TextScaled = true
+BombAll.TextSize = 14.000
+BombAll.TextWrapped = true
+BombAll.MouseButton1Click:Connect(function()
+	warn("hey so if youre reading the console this actually does nothing, i suck ass at scripting and ive tried SOOO many different variations of the bomb all script, so if you actually do find a working good one pls dm me αρ#1214 ty")
+end)
+
+TextLabel.Parent = OpenFrame
+TextLabel.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.BackgroundTransparency = 1.000
+TextLabel.BorderSizePixel = 0
+TextLabel.Size = UDim2.new(0.497222215, 0, 0.977777779, 0)
+TextLabel.Font = Enum.Font.Bodoni
+TextLabel.Text = "Ragdoll Engine GUI"
+TextLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+TextLabel.TextScaled = true
+TextLabel.TextSize = 14.000
+TextLabel.TextWrapped = true
+TextLabel.Active = true
+TextLabel.Draggable = true
