@@ -1,6 +1,6 @@
 local Plugin = {
     ["PluginName"] = "interactable objects esp",
-    ["PluginDescription"] = "clickdetectors are red, proximityprompts are green, touchinterests are yellow.",
+    ["PluginDescription"] = "cd = red, pp = green, ti = yellow, seat = light blue",
     ["Commands"] = {
         ["clickdetectoresp"] = {
             ["ListName"] = "clickdetectoresp/clickesp/cdesp",
@@ -8,7 +8,7 @@ local Plugin = {
             ["Aliases"] = {"clickesp", "cdesp"},
             ["Function"] = function(args, speaker)
                 for i,v in pairs(game:GetDescendants()) do
-                if v.ClassName == "ClickDetector" then
+                if v.ClassName == "ClickDetector" and v.Parent.ClassName == "Part" then
                 local a = Instance.new("BoxHandleAdornment")
 			a.Name = "clickdetector esp"
 			a.Parent = v.Parent
@@ -62,6 +62,26 @@ local Plugin = {
         end
     end
         },
+        ["seatesp"] = {
+            ["ListName"] = "seatesp/sesp",
+            ["Description"] = "allows esp for blocks with a seat",
+            ["Aliases"] = {"sesp"},
+            ["Function"] = function(args, speaker)
+                for i,v in pairs(Game:GetDescendants()) do
+                if v.ClassName == "Seat" then
+                local a = Instance.new("BoxHandleAdornment")
+            a.Name = "seat esp"
+            a.Parent = v
+            a.Adornee = v
+            a.AlwaysOnTop = true
+            a.ZIndex = 0
+            a.Size = v.Size
+            a.Transparency = 0.3
+            a.Color = BrickColor.new("Toothpaste")
+            end
+        end
+    end
+        },
         ["unclickdetectoresp"] = {
             ["ListName"] = "unclickdetectoresp/uncdesp",
             ["Description"] = "removes esp from blocks w/ clickdetector",
@@ -97,6 +117,18 @@ local Plugin = {
                 end
             end
         end
+        },
+        ["unseatesp"] = {
+            ["ListName"] = "unseatesp/unsesp",
+            ["Description"] = "removes esp from blocks w/ seat",
+            ["Aliases"] = {"unsesp"},
+            ["Function"] = function(args, speaker)
+                for i,v in pairs(Game:GetDescendants()) do
+                if v.ClassName == "BoxHandleAdornment" and v.Name == "seat esp" then
+                    v:Destroy()
+            end
+        end
+    end
         }
     }
 }
