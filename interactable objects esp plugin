@@ -7,7 +7,7 @@ local Plugin = {
             ["Description"] = "allows esp for blocks with a clickdetector",
             ["Aliases"] = {"clickesp", "cdesp"},
             ["Function"] = function(args, speaker)
-                for i,v in pairs(game:GetDescendants()) do
+                for i,v in pairs(game.Workspace:GetDescendants()) do
                 if v.ClassName == "ClickDetector" and v.Parent.ClassName == "Part" then
                 local a = Instance.new("BoxHandleAdornment")
 			a.Name = "clickdetector esp"
@@ -27,7 +27,7 @@ local Plugin = {
             ["Description"] = "allows esp for blocks with a proximityprompt",
             ["Aliases"] = {"promptesp", "ppesp"},
             ["Function"] = function(args, speaker)
-                for i,v in pairs(Game:GetDescendants()) do
+                for i,v in pairs(Game.Workspace:GetDescendants()) do
                 if v.ClassName == "ProximityPrompt" then
                 local a = Instance.new("BoxHandleAdornment")
 			a.Name = "proximity esp"
@@ -47,7 +47,7 @@ local Plugin = {
             ["Description"] = "allows esp for blocks with a touchinterest",
             ["Aliases"] = {"touchesp", "tesp"},
             ["Function"] = function(args, speaker)
-                for i,v in pairs(Game:GetDescendants()) do
+                for i,v in pairs(Game.Workspace:GetDescendants()) do
                 if v.ClassName == "TouchTransmitter" then
                 local a = Instance.new("BoxHandleAdornment")
             a.Name = "touchinterest esp"
@@ -67,7 +67,7 @@ local Plugin = {
             ["Description"] = "allows esp for blocks with a seat",
             ["Aliases"] = {"sesp"},
             ["Function"] = function(args, speaker)
-                for i,v in pairs(Game:GetDescendants()) do
+                for i,v in pairs(Game.Workspace:GetDescendants()) do
                 if v.ClassName == "Seat" then
                 local a = Instance.new("BoxHandleAdornment")
             a.Name = "seat esp"
