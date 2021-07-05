@@ -1,0 +1,45 @@
+-- Instances:
+
+local joe = Instance.new("ScreenGui")
+local alertframe = Instance.new("Frame")
+local d = Instance.new("TextLabel")
+
+--Properties:
+
+joe.Name = "joe"
+joe.Parent = game.CoreGui
+joe.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+alertframe.Name = "alertframe"
+alertframe.Parent = joe
+alertframe.BackgroundColor3 = Color3.fromRGB(67, 67, 67)
+alertframe.BorderSizePixel = 0
+alertframe.Position = UDim2.new(0.072883144, 0, 0.51252085, 0)
+alertframe.Size = UDim2.new(0.291532695, 0, 0.0300500803, 0)
+alertframe.Active = true
+alertframe.Selectable = true
+alertframe.Draggable = true
+
+d.Name = "d"
+d.Parent = alertframe
+d.BackgroundColor3 = Color3.fromRGB(63, 255, 20)
+d.BorderSizePixel = 0
+d.Position = UDim2.new(0, 0, 1.00000012, 0)
+d.Size = UDim2.new(1, 0, 8.01535416, 0)
+d.Font = Enum.Font.SourceSans
+d.Text = "it is safe for now"
+d.TextColor3 = Color3.fromRGB(0, 0, 0)
+d.TextScaled = true
+d.TextSize = 14.000
+d.TextWrapped = true
+while true do
+	wait()
+	if game.Workspace.monster.Static.Playing == true then
+		d.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+		d.Text = "hide asap its coming"
+	end
+	if game.Workspace.monster.Static.Playing == false then
+		d.BackgroundColor3 = Color3.fromRGB(63, 255, 20)
+		d.Text = "it is safe for now"
+	end
+end
