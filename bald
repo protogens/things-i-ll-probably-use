@@ -83,6 +83,7 @@ Close.TextStrokeColor3 = Color3.fromRGB(255, 255, 255)
 Close.TextWrapped = true
 Close.MouseButton1Click:Connect(function()
 	_87Gb76YUr:Destroy()
+	game.ReplicatedStorage.whichnumber:Destroy()
 end)
 ping.Text = "..."
 
