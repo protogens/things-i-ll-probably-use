@@ -1,4 +1,4 @@
---yeah youre checking this out, this is just all the blah blah making gui and make it do the thing
+--yeah youre checking this out, this is just all the blah blah making gui and make it do the thing.
 local _87Gb76YUr = Instance.new("ScreenGui")
 local Drag = Instance.new("TextButton")
 local Main = Instance.new("Frame")
