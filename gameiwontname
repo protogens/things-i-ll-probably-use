@@ -1,0 +1,407 @@
+--the special esp has no code besides a print if you wanna spam your console
+--im only putting this here because its long and im tired of repasting the same script over and over
+
+local ScreenGui = Instance.new("ScreenGui")
+local MainGui = Instance.new("Frame")
+local Draggable = Instance.new("Frame")
+local Title = Instance.new("TextLabel")
+local Close = Instance.new("TextButton")
+local UICorner = Instance.new("UICorner")
+local Container = Instance.new("Frame")
+local SpecialEsp = Instance.new("Frame")
+local Name = Instance.new("TextLabel")
+local UICorner_2 = Instance.new("UICorner")
+local Button = Instance.new("ImageButton")
+local UICorner_3 = Instance.new("UICorner")
+local CamEsp = Instance.new("Frame")
+local Name_2 = Instance.new("TextLabel")
+local UICorner_4 = Instance.new("UICorner")
+local Button_2 = Instance.new("ImageButton")
+local UICorner_5 = Instance.new("UICorner")
+local PlayerEsp = Instance.new("Frame")
+local Name_3 = Instance.new("TextLabel")
+local UICorner_6 = Instance.new("UICorner")
+local Button_3 = Instance.new("ImageButton")
+local UICorner_7 = Instance.new("UICorner")
+local GoldenEsp = Instance.new("Frame")
+local Name_4 = Instance.new("TextLabel")
+local UICorner_8 = Instance.new("UICorner")
+local Button_4 = Instance.new("ImageButton")
+local UICorner_9 = Instance.new("UICorner")
+local Values = Instance.new("Folder")
+local Drag = Instance.new("UIDragDetector")
+
+--Properties:
+
+ScreenGui.Parent = game.CoreGui
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+MainGui.Name = "MainGui"
+MainGui.Parent = ScreenGui
+MainGui.BackgroundColor3 = Color3.fromRGB(64, 32, 127)
+MainGui.BorderColor3 = Color3.fromRGB(0, 0, 0)
+MainGui.BorderSizePixel = 0
+MainGui.ClipsDescendants = true
+MainGui.Position = UDim2.new(0.465062112, 0, 0.340595692, 0)
+MainGui.Size = UDim2.new(0.24844721, 0, 0.324301332, 0)
+
+Drag.Parent = MainGui
+
+Draggable.Name = "Draggable"
+Draggable.Parent = MainGui
+Draggable.BackgroundColor3 = Color3.fromRGB(43, 21, 85)
+Draggable.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Draggable.BorderSizePixel = 0
+Draggable.ClipsDescendants = true
+Draggable.Position = UDim2.new(-0.000325927744, 0, -0.000438748859, 0)
+Draggable.Size = UDim2.new(1, 0, 0.0961538404, 0)
+
+Title.Name = "Title"
+Title.Parent = Draggable
+Title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Title.BackgroundTransparency = 1.000
+Title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Title.BorderSizePixel = 0
+Title.Position = UDim2.new(0.0175000001, 0, 0, 0)
+Title.Size = UDim2.new(0.25, 0, 1, 0)
+Title.Font = Enum.Font.Highway
+Title.Text = "In Plain Sight 2"
+Title.TextColor3 = Color3.fromRGB(255, 255, 255)
+Title.TextSize = 14.000
+Title.TextStrokeTransparency = 0.000
+Title.TextXAlignment = Enum.TextXAlignment.Left
+
+Close.Name = "Close"
+Close.Parent = Draggable
+Close.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Close.BackgroundTransparency = 1.000
+Close.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Close.BorderSizePixel = 0
+Close.Position = UDim2.new(0.9375, 0, 0, 0)
+Close.Size = UDim2.new(0.0625, 0, 1, 0)
+Close.Font = Enum.Font.SourceSans
+Close.Text = "X"
+Close.TextColor3 = Color3.fromRGB(255, 255, 255)
+Close.TextScaled = true
+Close.TextSize = 14.000
+Close.TextStrokeTransparency = 0.000
+Close.TextWrapped = true
+
+UICorner.Parent = MainGui
+
+Container.Name = "Container"
+Container.Parent = MainGui
+Container.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Container.BackgroundTransparency = 1.000
+Container.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Container.BorderSizePixel = 0
+Container.Position = UDim2.new(0, 0, 0.123076923, 0)
+Container.Size = UDim2.new(0.997500002, 0, 0.873076916, 0)
+
+SpecialEsp.Name = "SpecialEsp"
+SpecialEsp.Parent = Container
+SpecialEsp.BackgroundColor3 = Color3.fromRGB(70, 35, 141)
+SpecialEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+SpecialEsp.BorderSizePixel = 0
+SpecialEsp.ClipsDescendants = true
+SpecialEsp.LayoutOrder = 2
+SpecialEsp.Position = UDim2.new(0.0246741101, 0, 0.320170283, 0)
+SpecialEsp.Size = UDim2.new(0.952380955, 0, 0.132158592, 0)
+
+Name.Name = "Name"
+Name.Parent = SpecialEsp
+Name.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name.BackgroundTransparency = 1.000
+Name.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name.BorderSizePixel = 0
+Name.Position = UDim2.new(0.0175000634, 0, 0, 0)
+Name.Size = UDim2.new(0.263157904, 0, 1, 0)
+Name.Font = Enum.Font.Highway
+Name.Text = "Special Item ESP"
+Name.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name.TextSize = 14.000
+Name.TextStrokeTransparency = 0.000
+Name.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_2.Parent = SpecialEsp
+
+Button.Name = "Button"
+Button.Parent = SpecialEsp
+Button.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+Button.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button.BorderSizePixel = 0
+Button.Position = UDim2.new(0.911958158, 0, 0.0333334729, 0)
+Button.Size = UDim2.new(0.0736842081, 0, 0.933333337, 0)
+
+UICorner_3.Parent = Button
+
+CamEsp.Name = "CamEsp"
+CamEsp.Parent = Container
+CamEsp.BackgroundColor3 = Color3.fromRGB(70, 35, 141)
+CamEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CamEsp.BorderSizePixel = 0
+CamEsp.ClipsDescendants = true
+CamEsp.Position = UDim2.new(0.0246741101, 0, -0.00602699863, 0)
+CamEsp.Size = UDim2.new(0.952380955, 0, 0.132158592, 0)
+
+Name_2.Name = "Name"
+Name_2.Parent = CamEsp
+Name_2.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.BackgroundTransparency = 1.000
+Name_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_2.BorderSizePixel = 0
+Name_2.Position = UDim2.new(0.0175000634, 0, 0, 0)
+Name_2.Size = UDim2.new(0.263157904, 0, 1, 0)
+Name_2.Font = Enum.Font.Highway
+Name_2.Text = "Camera ESP"
+Name_2.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_2.TextSize = 14.000
+Name_2.TextStrokeTransparency = 0.000
+Name_2.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_4.Parent = CamEsp
+
+Button_2.Name = "Button"
+Button_2.Parent = CamEsp
+Button_2.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+Button_2.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_2.BorderSizePixel = 0
+Button_2.Position = UDim2.new(0.911958158, 0, 0.0333334729, 0)
+Button_2.Size = UDim2.new(0.0736842081, 0, 0.933333337, 0)
+
+UICorner_5.Parent = Button_2
+
+PlayerEsp.Name = "PlayerEsp"
+PlayerEsp.Parent = Container
+PlayerEsp.BackgroundColor3 = Color3.fromRGB(70, 35, 141)
+PlayerEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+PlayerEsp.BorderSizePixel = 0
+PlayerEsp.ClipsDescendants = true
+PlayerEsp.LayoutOrder = 1
+PlayerEsp.Position = UDim2.new(0.0246741101, 0, 0.155729145, 0)
+PlayerEsp.Size = UDim2.new(0.952380955, 0, 0.132158592, 0)
+
+Name_3.Name = "Name"
+Name_3.Parent = PlayerEsp
+Name_3.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_3.BackgroundTransparency = 1.000
+Name_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_3.BorderSizePixel = 0
+Name_3.Position = UDim2.new(0.0175000634, 0, 0, 0)
+Name_3.Size = UDim2.new(0.263157904, 0, 1, 0)
+Name_3.Font = Enum.Font.Highway
+Name_3.Text = "Player ESP"
+Name_3.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_3.TextSize = 14.000
+Name_3.TextStrokeTransparency = 0.000
+Name_3.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_6.Parent = PlayerEsp
+
+Button_3.Name = "Button"
+Button_3.Parent = PlayerEsp
+Button_3.BackgroundColor3 = Color3.fromRGB(85, 0, 0)
+Button_3.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_3.BorderSizePixel = 0
+Button_3.Position = UDim2.new(0.911958158, 0, 0.0333334729, 0)
+Button_3.Size = UDim2.new(0.0736842081, 0, 0.933333337, 0)
+
+UICorner_7.Parent = Button_3
+
+GoldenEsp.Name = "GoldenEsp"
+GoldenEsp.Parent = Container
+GoldenEsp.BackgroundColor3 = Color3.fromRGB(70, 35, 141)
+GoldenEsp.BorderColor3 = Color3.fromRGB(0, 0, 0)
+GoldenEsp.BorderSizePixel = 0
+GoldenEsp.ClipsDescendants = true
+GoldenEsp.LayoutOrder = 2
+GoldenEsp.Position = UDim2.new(0.0246741101, 0, 0.4834508, 0)
+GoldenEsp.Size = UDim2.new(0.952380955, 0, 0.132158592, 0)
+
+Name_4.Name = "Name"
+Name_4.Parent = GoldenEsp
+Name_4.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Name_4.BackgroundTransparency = 1.000
+Name_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Name_4.BorderSizePixel = 0
+Name_4.Position = UDim2.new(0.0175000634, 0, 0, 0)
+Name_4.Size = UDim2.new(0.263157904, 0, 1, 0)
+Name_4.Font = Enum.Font.Highway
+Name_4.Text = "Highlight Gold Items"
+Name_4.TextColor3 = Color3.fromRGB(255, 255, 255)
+Name_4.TextSize = 14.000
+Name_4.TextStrokeTransparency = 0.000
+Name_4.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_8.Parent = GoldenEsp
+
+Button_4.Name = "Button"
+Button_4.Parent = GoldenEsp
+Button_4.BackgroundColor3 = Color3.fromRGB(85, 85, 85)
+Button_4.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Button_4.BorderSizePixel = 0
+Button_4.Position = UDim2.new(0.911958158, 0, 0.00862369034, 0)
+Button_4.Size = UDim2.new(0.0736842081, 0, 0.933333337, 0)
+
+UICorner_9.Parent = Button_4
+
+Values.Name = "Values"
+Values.Parent = Container
+
+local g = game.Workspace:FindFirstChild("RoundDebris")
+local m = game.Workspace:FindFirstChild("CurrentMap")
+
+local camesp = Instance.new("BoolValue")
+camesp.Name = "cam"
+camesp.Parent = Values
+local plresp = Instance.new("BoolValue")
+camesp.Name = "plr"
+camesp.Parent = Values
+local specialesp = Instance.new("BoolValue")
+camesp.Name = "spcl"
+camesp.Parent = Values
+
+Close.MouseButton1Click:Connect(function()
+	ScreenGui:Destroy()
+end)
+
+Button.MouseButton1Click:Connect(function()
+	specialesp.Value = not specialesp.Value
+end)
+specialesp.Changed:Connect(function()
+	if specialesp.Value == true then
+		print("you'd rather die than try to make this dude")
+		Button.BackgroundColor3 = Color3.fromRGB(0,85,0)
+	elseif specialesp.Value == false then
+		print("thats what i thought")
+		Button.BackgroundColor3 = Color3.fromRGB(85,0,0)
+	end
+end)
+
+Button_2.MouseButton1Click:Connect(function()
+	camesp.Value = not camesp.Value
+end)
+camesp.Changed:Connect(function()
+	if camesp.Value == true then
+		Button_2.BackgroundColor3 = Color3.fromRGB(0,85,0)
+		for i,v in pairs(g:GetChildren()) do
+			if v.Name == "ActiveCamModel" then
+				local t = Instance.new("Highlight")
+				t.Parent = v:FindFirstChild("Assembly")
+				t.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				t.FillTransparency = 0.6
+				t.FillColor = Color3.fromRGB(151, 117, 209)
+				t.OutlineColor = Color3.fromRGB(98, 37, 209)
+				t.Name = "camappywappy"
+			end
+		end
+	elseif camesp.Value == false then
+		Button_2.BackgroundColor3 = Color3.fromRGB(85,0,0)
+		for i,v in pairs(workspace:GetDescendants()) do
+			if v:IsA("Highlight") and v.Name == "camappywappy" then
+				v:Destroy()
+			end
+		end
+	end
+end)
+
+Button_4.MouseButton1Click:Connect(function()
+	for i,v in pairs(m:GetDescendants()) do
+		if v.Name == "GoldenParticle" and v:IsA("Part") then
+			local t = Instance.new("Highlight")
+			t.Parent = v.Parent
+			t.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			t.FillTransparency = 0.7
+			t.FillColor = Color3.fromRGB(255, 249, 171)
+			t.OutlineColor = Color3.fromRGB(206, 209, 40)
+			t.Name = "goldappywappy"
+		end
+	end
+end)
+
+
+Button_3.MouseButton1Click:Connect(function()
+	plresp.Value = not plresp.Value
+end)
+plresp.Changed:Connect(function()
+	if plresp.Value == true then
+		Button_3.BackgroundColor3 = Color3.fromRGB(0,85,0)
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if v.Name ~= game.Players.LocalPlayer.Name then
+				local you = game.Workspace:FindFirstChild(v.Name)
+				local t = Instance.new("Highlight")
+				t.Parent = you
+				t.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				t.FillTransparency = 0.8
+				t.FillColor = Color3.fromRGB(151, 255, 149)
+				t.OutlineColor = Color3.fromRGB(11, 209, 18)
+				t.Name = "plrappywappy"
+			end
+		end
+	elseif plresp.Value == false then
+		Button_3.BackgroundColor3 = Color3.fromRGB(85,0,0)
+		for i,v in pairs(workspace:GetChildren()) do
+			if v:IsA("Model") and v:FindFirstChild("plrappywappy") then
+				v.plrappywappy:Destroy()
+			end
+		end
+	end
+end)
+game.Workspace.ChildAdded:Connect(function()
+	if plresp.Value == true then
+		for i,v in pairs(game.Players:GetPlayers()) do
+			if v.Name ~= game.Players.LocalPlayer.Name and not game.Workspace:FindFirstChild(v.Name):FindFirstChild("plrappywappy") then
+				local you = game.Workspace:FindFirstChild(v.Name)
+				local t = Instance.new("Highlight")
+				t.Parent = you
+				t.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+				t.FillTransparency = 0.8
+				t.FillColor = Color3.fromRGB(151, 255, 149)
+				t.OutlineColor = Color3.fromRGB(11, 209, 18)
+				t.Name = "plrappywappy"
+			end
+		end
+	end
+end)
+
+
+g.ChildAdded:Connect(function(v)
+	if camesp.Value == true then
+		if v.Name == "ActiveCamModel" then
+			local t = Instance.new("Highlight")
+			t.Parent = v:WaitForChild("Assembly")
+			t.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			t.FillTransparency = 0.6
+			t.FillColor = Color3.fromRGB(151, 117, 209)
+			t.OutlineColor = Color3.fromRGB(98, 37, 209)
+		end
+	end
+end)
+
+game:GetService("UserInputService").InputBegan:Connect(function(input, gameProcessed)
+	if input.KeyCode == Enum.KeyCode.LeftAlt and not gameProcessed then
+		MainGui.Visible = not MainGui.Visible
+	elseif input.KeyCode == Enum.KeyCode.C and not gameProcessed then
+		camesp.Value = not camesp.Value
+	elseif input.KeyCode == Enum.KeyCode.N and not gameProcessed then
+		plresp.Value = not plresp.Value
+    elseif input.KeyCode == Enum.KeyCode.G and not gameProcessed then
+        for i,v in pairs(m:GetDescendants()) do
+		if v.Name == "GoldenParticle" and v:IsA("Part") then
+			local t = Instance.new("Highlight")
+			t.Parent = v.Parent
+			t.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+			t.FillTransparency = 0.7
+			t.FillColor = Color3.fromRGB(255, 249, 171)
+			t.OutlineColor = Color3.fromRGB(206, 209, 40)
+			t.Name = "goldappywappy"
+		end
+	end
+	end
+end)
+
+game.Players:WaitForChild("aerdwaco").Changed:Connect(function()
+	if game.Players.aerdwaco.Team.Name == "Cameras" then
+		camesp.Value = false
+	end
+end)
